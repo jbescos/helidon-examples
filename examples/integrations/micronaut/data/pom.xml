@@ -31,6 +31,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>Helidon Examples Integration Micronaut Data</name>
 
+    <properties>
+        <version.lib.micronaut.validations>4.2.0</version.lib.micronaut.validations>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>jakarta.persistence</groupId>
@@ -48,6 +51,11 @@
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-runtime</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut.validation</groupId>
+            <artifactId>micronaut-validation</artifactId>
+            <version>${version.lib.micronaut.validations}</version>
         </dependency>
         <dependency>
             <groupId>io.helidon.logging</groupId>
@@ -124,8 +132,13 @@
                         </path>
                         <path>
                             <groupId>io.micronaut</groupId>
-                            <artifactId>micronaut-validation</artifactId>
+                            <artifactId>micronaut-core-processor</artifactId>
                             <version>${version.lib.micronaut}</version>
+                        </path>
+                        <path>
+                            <groupId>io.micronaut.validation</groupId>
+                            <artifactId>micronaut-validation-processor</artifactId>
+                            <version>${version.lib.micronaut.validation}</version>
                         </path>
                         <path>
                             <groupId>io.micronaut.data</groupId>
